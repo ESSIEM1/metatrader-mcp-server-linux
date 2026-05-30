@@ -148,9 +148,13 @@ See [LINUX_SETUP.md](LINUX_SETUP.md) for Ollama setup instructions.
 
 ## IMPOTANT RUNNING INFORMATION
 
-1) Make sure you run claude code or "ollama launch claude" inside the folder `~/metatrader-mcp-server-linux`
-(or ~/metatrader-mcp-server if you have modified the original MCP and manually added the "LINUX_SETUP.md from *[Aria Dhanang](https://github.com/ariadng)**
-Failing to do so, the MCP server and tools wont be available for claude/local LLM.
+1) Make sure you run `claude code` or `ollama launch claude` inside the folder:
+
+`~/metatrader-mcp-server-linux`
+
+(or `~/metatrader-mcp-server` if you have modified the original MCP from *[Aria Dhanang](https://github.com/ariadng)* and manually added our `LINUX_SETUP.md` patches.)
+
+Failing to do so, the MCP server and tools won't be available for Claude/local LLM.
 
 2) Many small llms are not able to find the mcp tools.
    Make sure you use an "Instruct" model such as "qwen2.5:7b-instruct" or "qcwind/qwen3-8b-instruct-Q4-K-M", both tested and confirmed working and available at https://ollama.com/
