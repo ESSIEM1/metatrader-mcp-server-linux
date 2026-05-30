@@ -161,9 +161,14 @@ Failing to do so, the MCP server and tools wont be available for claude/local LL
 
 ## Launching
 
-A)  cd ~/metatrader-mcp-server-linux
-    claude
-    (Type: "Using the metatrader-mcp-server tools, give me the account balance.")
+A)  ```bash
+cd ~/metatrader-mcp-server-linux
+claude
+```
+Then:
+```text
+Using the metatrader-mcp-server tools, give me the account balance.
+```
     
 B)  cd ~/metatrader-mcp-server-linux
     ollama launch claude
