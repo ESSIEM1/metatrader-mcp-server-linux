@@ -154,7 +154,7 @@ See [LINUX_SETUP.md](LINUX_SETUP.md) for Ollama setup instructions.
 
 (or `~/metatrader-mcp-server` if you have modified the original MCP from *[Aria Dhanang](https://github.com/ariadng)* and manually added our `LINUX_SETUP.md` patches.)
 
-Failing to do so, the MCP server and tools won't be available for Claude/local LLM.
+Failing to do so will result in the MCP server and tools being unavailable to Claude or local LLMs.
 
 2) Many small llms are not able to find the mcp tools.
    Make sure you use an "Instruct" model such as "qwen2.5:7b-instruct" or "qcwind/qwen3-8b-instruct-Q4-K-M", both tested and confirmed working and available at https://ollama.com/
