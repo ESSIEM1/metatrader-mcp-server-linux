@@ -1,0 +1,4 @@
+metatrader_client
+metatrader_mcp
+metatrader_openapi
+metatrader_quote
