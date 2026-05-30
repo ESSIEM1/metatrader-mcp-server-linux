@@ -136,11 +136,11 @@ Confirmed working models:
 
 | Model | Tool use | Notes |
 |-------|----------|-------|
-| `qwen2.5:7b-instruct` | ✅ confirmed | Recommended | Faster |
-| `qcwind/qwen3-8b-instruct-Q4-K-M` | ✅ confirmed | Good for trading logic | More "Agentic" |
+| `qwen2.5:7b-instruct` | ✅ confirmed | Recommended — fast, reliable tool use |
+| `qcwind/qwen3-8b-instruct-Q4-K-M` | ✅ confirmed | Good for trading logic — more agentic behavior |
 | `qwen3.5:9b` | ⚠️ | Fast, lightweight |
-| `llama3.1:8b` | ⚠️ | Decent tool support | Sometimes will forget about the tools |
-| `deepseek-r1:14b` | ⚠️ | Reasoning model, tool support varies |
+| `llama3.1:8b` | ⚠️ | Decent tool support — sometimes forgets tools |
+| `deepseek-r1:14b` | ⚠️ | Reasoning model — tool support varies |
 
 See [LINUX_SETUP.md](LINUX_SETUP.md) for Ollama setup instructions.
 
@@ -148,32 +148,38 @@ See [LINUX_SETUP.md](LINUX_SETUP.md) for Ollama setup instructions.
 
 ## IMPOTANT RUNNING INFORMATION
 
-1) Make sure you run claude code or "ollama launch claude" inside the folder ~/metatrader-mcp-server-linux
+1) Make sure you run claude code or "ollama launch claude" inside the folder `~/metatrader-mcp-server-linux`
 (or ~/metatrader-mcp-server if you have modified the original MCP and manually added the "LINUX_SETUP.md from *[Aria Dhanang](https://github.com/ariadng)**
 Failing to do so, the MCP server and tools wont be available for claude/local LLM.
 
 2) Many small llms are not able to find the mcp tools.
    Make sure you use an "Instruct" model such as "qwen2.5:7b-instruct" or "qcwind/qwen3-8b-instruct-Q4-K-M", both tested and confirmed working and available at https://ollama.com/
 
-3) If your model is not communicating with MT5, make sure MT5 is open or run: "~/metatrader-mcp-server/start.sh" in a different terminal tab.
+3) If your model is not communicating with MT5, make sure MT5 is open or run: `~/metatrader-mcp-server/start.sh` in a different terminal tab.
 
 ---
 
 ## Launching
 
-A)  ```bash
+a) Using Claude CLI
+
 cd ~/metatrader-mcp-server-linux
 claude
-```
-Then:
-```text
+
+Then inside the CLI:
+
 Using the metatrader-mcp-server tools, give me the account balance.
-```
     
-B)  cd ~/metatrader-mcp-server-linux
-    ollama launch claude
-    (Select your model "qwen2.5:7b-instruct")
-    (Type: "Using the metatrader-mcp-server tools, give me the account balance.")
+B) Using Ollama
+
+cd ~/metatrader-mcp-server-linux
+ollama launch claude
+
+Then:
+
+Select model: qwen2.5:7b-instruct
+Enter prompt:
+Using the metatrader-mcp-server tools, give me the account balance.
 
 ---
 
