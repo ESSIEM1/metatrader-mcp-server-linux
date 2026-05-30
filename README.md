@@ -136,13 +136,39 @@ Confirmed working models:
 
 | Model | Tool use | Notes |
 |-------|----------|-------|
-| `gemma4` | ✅ confirmed | Recommended |
-| `gpt-oss` | ✅ confirmed | Good for trading logic |
-| `qwen3.5:9b` | ✅ | Fast, lightweight |
-| `llama3.1:8b` | ✅ | Decent tool support |
+| `qwen2.5:7b-instruct` | ✅ confirmed | Recommended | Faster |
+| `qcwind/qwen3-8b-instruct-Q4-K-M` | ✅ confirmed | Good for trading logic | More "Agentic" |
+| `qwen3.5:9b` | ⚠️ | Fast, lightweight |
+| `llama3.1:8b` | ⚠️ | Decent tool support | Sometimes will forget about the tools |
 | `deepseek-r1:14b` | ⚠️ | Reasoning model, tool support varies |
 
 See [LINUX_SETUP.md](LINUX_SETUP.md) for Ollama setup instructions.
+
+---
+
+## IMPOTANT RUNNING INFORMATION
+
+1) Make sure you run claude code or "ollama launch claude" inside the folder "~/metatrader-mcp-server-linux" 
+(or "~/metatrader-mcp-server" if you have modified the original MCP and manually added the "LINUX_SETUP.md from *[Aria Dhanang](https://github.com/ariadng)**
+Failing to do so, the MCP server and tools wont be available for claude/local LLM.
+
+2) Many small llms are not able to find the mcp tools.
+   Make sure you use an "Instruct" model such as "qwen2.5:7b-instruct" or "qcwind/qwen3-8b-instruct-Q4-K-M", both tested and confirmed working and available at https://ollama.com/
+
+3) If your model is not communicating with MT5, make sure MT5 is open or run: "~/metatrader-mcp-server/start.sh" in a different terminal tab.
+
+---
+
+## Launching
+
+A)  cd ~/metatrader-mcp-server-linux
+    claude
+    (Type: "Using the metatrader-mcp-server tools, give me the account balance.")
+    
+B)  cd ~/metatrader-mcp-server-linux
+    ollama launch claude
+    (Select your model "qwen2.5:7b-instruct")
+    (Type: "Using the metatrader-mcp-server tools, give me the account balance.")
 
 ---
 
@@ -150,14 +176,18 @@ See [LINUX_SETUP.md](LINUX_SETUP.md) for Ollama setup instructions.
 
 | Component | Version |
 |-----------|---------|
-| OS | Debian 13 |
+| OS | Debian 13 Trixie |
+| Kernel | Linux 6.12.88+deb13-amd64 |
 | Wine | 10.0 |
 | MT5 build | 5833 |
 | Windows Python (Wine) | 3.10.11 |
 | Linux Python | 3.11.9 |
 | MetaTrader5 package | 5.0.5735 |
 | Claude Code | v2.1.153 |
-| Ollama + Gemma4 | confirmed working |
+| Ollama + qwen2.5:7b-instruct and qwen3-8b-instruct-Q4-K-M | confirmed working |
+| CPU: AMD EPYC 7551P 32-Core (64) |
+| GPU: NVIDIA RTX 3060 12GB |
+| MEMORY: 256GB 2667 ECC |
 
 ---
 
