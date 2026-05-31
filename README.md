@@ -159,7 +159,8 @@ Failing to do so will result in the MCP server and tools being unavailable to Cl
 2) Many small llms are not able to find the mcp tools.
    Make sure you use an "Instruct" model such as "qwen2.5:7b-instruct" or "qcwind/qwen3-8b-instruct-Q4-K-M", both tested and confirmed working and available at https://ollama.com/
 
-3) If your model is not communicating with MT5, make sure MT5 is open or run: `~/metatrader-mcp-server/start.sh` in a different terminal tab.
+3) Running `ollama launch claude` should automatically run the script, opening and connecting to MT5. If your model is not communicating with MT5, make sure MT5 is open or run the script manually:
+   `~/metatrader-mcp-server/start.sh` in a different terminal tab.
 
 ---
 
