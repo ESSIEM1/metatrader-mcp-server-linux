@@ -24,7 +24,7 @@
 This repo makes MetaTrader MCP work on Linux by bridging the Windows-only `MetaTrader5` Python package through Wine using `mt5linux`. Once set up, you can use:
 
 - **Claude Code** (Anthropic's CLI) — fully confirmed working
-- **Ollama local LLMs** (Gemma4, gpt-oss, qwen3.5, etc.) — fully confirmed working
+- **Ollama local LLMs** (qwen2.5:7b-instruct, qwen3-8b-instruct, etc.) — fully confirmed working
 - Any other MCP-compatible client
 
 ---
